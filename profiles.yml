@@ -1,0 +1,7 @@
+cms_provider_enrollment:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/cms.duckdb
+      threads: 4
