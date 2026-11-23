@@ -5,3 +5,15 @@ cms_provider_enrollment:
       type: duckdb
       path: data/cms.duckdb
       threads: 4
+    prod:
+      type: duckdb
+      path: data/cms.duckdb
+      threads: 4
+    ci:
+      type: duckdb
+      path: data/pr.duckdb
+      threads: 4
+      attach:
+        - path: data/cms.duckdb
+          alias: cms
+          read_only: true
