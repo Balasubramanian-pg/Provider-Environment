@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: fct_provider_enrollment
+    description: One row per Medicare enrollment record (NPI + enrollment ID).
+    columns:
+      - name: enrollment_key
+        data_tests: [unique, not_null]
+      - name: npi
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_provider')
+              field: npi
+      - name: enrlmt_id
+        data_tests: [not_null]
+  - name: dim_provider
+    description: One row per NPI across all enrollment records.
+    columns:
+      - name: npi
+        data_tests: [unique, not_null]
+  - name: provider_compliance_flags
+    description: NPI-level presence across enrollment, order/refer, opt-out, revoked, OTP, and home infusion lists.
+    columns:
+      - name: npi
+        data_tests: [unique, not_null]
