@@ -1,0 +1,7 @@
+.venv/
+data/
+target/
+dbt_packages/
+logs/
+ingest/registry.json
+models/staging/
