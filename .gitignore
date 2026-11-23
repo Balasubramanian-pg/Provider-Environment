@@ -5,3 +5,4 @@ dbt_packages/
 logs/
 ingest/registry.json
 models/staging/
+state/
