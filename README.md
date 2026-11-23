@@ -173,7 +173,7 @@ its expected cycle. Full load is ~18M rows, a few hundred MB of downloads, and a
 
 ## Roadmap
 
-- [ ] GitHub Actions: scheduled refresh plus `dbt build` with state-based deferral on PRs
+- [x] GitHub Actions: scheduled refresh plus dbt build with state-based deferral on PRs
 - [ ] Revalidation mart (due dates joined to reassignment chains)
 - [ ] Union mart across facility enrollment files
 - [ ] dbt exposures for downstream BI consumers
